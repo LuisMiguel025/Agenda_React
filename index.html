@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Contacts</title>
+  </head>
+  <body>
+    <div class="titles">
+      <h1 class="title">Contacts</h1>
+      <h2 class="subtitle">Add Contacts</h2>
+    </div>
+    <!-- FORM -->
+    <div class="form">
+      <form class="form-inline" id="form">
+        <input
+          type="text"
+          id="name"
+          placeholder="Name"
+          minlength="3"
+          maxlength="30"
+          required
+        />
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Last Name"
+          minlength="3"
+          maxlength="30"
+          required
+        />
+        <input
+          type="tel"
+          id="phoneNumber"
+          placeholder="Phone Number"
+          required
+          minlength="10"
+          maxlength="15"
+        />
+        <button type="submit" id="saveButton">Save</button>
+      </form>
+    </div>
+    <!-- CONTACTS -->
+    <h2 class="listTitle">Contacts List</h2>
+    <div class="contacts">
+      <table id="contacts">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- GO TOP -->
+    <div id="container" class="container"></div>
+    <div class="goTop" id="goTop">
+      <span class="goTop__icon">^</span>
+    </div>
+    <script src="js/scripts.js" type="module"></script>
+  </body>
+</html>

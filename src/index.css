@@ -1,0 +1,159 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #999;
+}
+.title,
+.subtitle,
+.listTitle {
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.subtitle,
+.listTitle {
+  font-size: 2rem;
+}
+
+/* GO TOP  */
+.goTop {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 25px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #000;
+  line-height: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translateY(75px);
+  transition: transform 0.5s ease-in-out;
+}
+.goTop__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goTop__active {
+  transform: translateY(0);
+}
+table {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-column);
+    color: #000;
+    font-weight: bold;
+  }
+}
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+button,
+input {
+  border: none;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
